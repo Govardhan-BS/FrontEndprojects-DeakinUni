@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV@Deakin - Email Subscription</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header-image">
+        <div class="overlay">
+            <span>Hey, I'm Dev</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="subscription-section">
+            <div class="container">
+                <h1>SIGN UP FOR OUR DAILY INSIDER</h1>
+                <p class="subtitle">Stay updated with the latest tech insights, developer resources, and community highlights.</p>
+                
+                <form id="subscriptionForm" class="subscription-form">
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="emailInput" 
+                            placeholder="Enter your email" 
+                            required
+                            class="email-input"
+                        >
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </div>
+                    <div id="message" class="message"></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>What You'll Get</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h3>Daily Tech Insights</h3>
+                        <p>Get the latest trends and developments in the tech world delivered to your inbox.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Developer Resources</h3>
+                        <p>Access exclusive tutorials, code snippets, and development tools.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Community Events</h3>
+                        <p>Stay informed about upcoming meetups, workshops, and networking opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="Contact">
+        <h2>Contact us</h2>
+        <p>Email: dev@deakin.edu.au</p>
+        <p>Phone: +61 3 9244 6100</p>
+        <p>Address: Deakin University, Melbourne, Australia</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

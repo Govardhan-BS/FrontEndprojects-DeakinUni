@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background: linear-gradient(135deg, #7e92b1 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+nav {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    padding: 10px 0;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.header-image {
+    position: relative;
+    background: url('../images/deakin image.jpg') center/cover no-repeat;
+    height: 250px;
+}
+
+.header-image .overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #fff;
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.header-image:hover .overlay {
+    opacity: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.subscription-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 40px 0;
+}
+
+.subscription-section h1 {
+    color: #008080;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscription-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.email-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: #008080;
+    box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
+}
+
+.subscribe-btn {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(67, 206, 162, 0.3);
+}
+
+.subscribe-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.features {
+    margin: 60px 0;
+}
+
+.features h2 {
+    color: #008080;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.feature h3 {
+    color: #008080;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.feature p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.Contact {
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin: 40px auto 32px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.Contact h2 {
+    color: #008080;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .subscription-section h1 {
+        font-size: 2em;
+    }
+    
+    .form-group {
+        flex-direction: column;
+    }
+    
+    .subscribe-btn {
+        width: 100%;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-image .overlay {
+        font-size: 1.5em;
+        left: 20px;
+        bottom: 15px;
+    }
+} 
