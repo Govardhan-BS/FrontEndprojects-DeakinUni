@@ -1,0 +1,28 @@
+.featured-tutorials {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  margin-bottom: 3rem !important;
+  font-size: 2.5rem !important;
+  color: #333 !important;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.see-all-button {
+  background-color: #666 !important;
+  color: white !important;
+  border-radius: 25px !important;
+  padding: 1rem 2rem !important;
+  font-size: 1.1rem !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.see-all-button:hover {
+  background-color: #555 !important;
+} 

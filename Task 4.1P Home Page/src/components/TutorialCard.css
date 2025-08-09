@@ -1,0 +1,47 @@
+.tutorial-card {
+  width: 100% !important;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.tutorial-image {
+  height: 200px !important;
+  object-fit: cover;
+}
+
+.tutorial-title {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.tutorial-description {
+  color: #666 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.4 !important;
+}
+
+.tutorial-footer {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding-top: 0.5rem !important;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 0.25rem;
+}
+
+.username {
+  font-size: 0.8rem;
+  color: #007acc;
+  margin-left: auto;
+} 
