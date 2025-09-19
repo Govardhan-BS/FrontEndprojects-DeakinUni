@@ -1,23 +1,21 @@
 import React from 'react';
-import { Container, Menu, Button } from 'semantic-ui-react';
+import { Container, Menu, Input, Button } from 'semantic-ui-react';
 import { useNavigate } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
-import { auth } from '../firebase/config';
+import './Header.css';
 
-const Header = ({ user }) => {
+const Header = () => {
   const navigate = useNavigate();
-
-  const handleSignOut = async () => {
-    try {
-      await signOut(auth);
-      navigate('/login');
-    } catch (error) {
-      console.error('Error signing out:', error);
-    }
-  };
 
   const handleLoginClick = () => {
     navigate('/login');
+  };
+
+  const handlePostClick = () => {
+    navigate('/post');
+  };
+
+  const handleStatusClick = () => {
+    navigate('/status');
   };
 
   return (
@@ -28,24 +26,23 @@ const Header = ({ user }) => {
         </Menu.Item>
         
         <Menu.Menu position='right'>
-          {user ? (
-            <>
-              <Menu.Item>
-                Welcome, {user.email}
-              </Menu.Item>
-              <Menu.Item>
-                <Button basic inverted onClick={handleSignOut}>
-                  Sign Out
-                </Button>
-              </Menu.Item>
-            </>
-          ) : (
-            <Menu.Item>
-              <Button basic inverted onClick={handleLoginClick}>
-                Login
-              </Button>
-            </Menu.Item>
-          )}
+          <Menu.Item>
+            <Input 
+              placeholder='Search...' 
+              className="search-input"
+              icon='search'
+              iconPosition='left'
+            />
+          </Menu.Item>
+          <Menu.Item>
+            <Button basic inverted onClick={handlePostClick}>Post</Button>
+          </Menu.Item>
+          <Menu.Item>
+            <Button basic inverted onClick={handleStatusClick}>Status</Button>
+          </Menu.Item>
+          <Menu.Item>
+            <Button basic inverted onClick={handleLoginClick}>Login</Button>
+          </Menu.Item>
         </Menu.Menu>
       </Container>
     </Menu>

@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { auth, db } from '../firebase/config';
 import { useNavigate } from 'react-router-dom';
+import './SignUp.css';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -83,7 +84,7 @@ const SignUp = () => {
     <Container className="signup-container">
       <Grid centered>
         <Grid.Column width={6}>
-          <div className="form-container">
+          <div className="signup-form-container">
             <Header as='h2' textAlign='center' className="form-header">
               Create a DEV@Deakin Account
             </Header>
@@ -157,7 +158,7 @@ const SignUp = () => {
                 loading={loading}
                 className="create-button"
               >
-                Create Account
+                Create
               </Button>
             </Form>
             

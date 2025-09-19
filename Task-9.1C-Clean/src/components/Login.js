@@ -3,6 +3,7 @@ import { Form, Button, Message, Container, Grid, Header } from 'semantic-ui-reac
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase/config';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -50,7 +51,7 @@ const Login = () => {
     <Container className="login-container">
       <Grid centered>
         <Grid.Column width={6}>
-          <div className="form-container">
+          <div className="login-form-container">
             <Header as='h2' textAlign='center' className="form-header">
               Login to DEV@Deakin
             </Header>

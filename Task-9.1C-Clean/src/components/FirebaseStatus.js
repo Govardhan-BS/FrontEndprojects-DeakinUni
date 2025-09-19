@@ -132,7 +132,7 @@ const FirebaseStatus = () => {
           <List.Item>Create a new project or select existing one</List.Item>
           <List.Item>Enable Authentication (Email/Password provider)</List.Item>
           <List.Item>Enable Firestore Database</List.Item>
-          <List.Item>Go to Project Settings > General</List.Item>
+          <List.Item>Go to Project Settings  General</List.Item>
           <List.Item>Copy the config object to src/firebase/config.js</List.Item>
         </List>
       </div>

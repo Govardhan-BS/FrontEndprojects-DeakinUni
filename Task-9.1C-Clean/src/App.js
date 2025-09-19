@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Home from './components/Home';
+import FirebaseStatus from './components/FirebaseStatus';
 import './App.css';
 
 function App() {
@@ -22,31 +23,20 @@ function App() {
   }, []);
 
   if (loading) {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '100vh',
-        fontSize: '18px'
-      }}>
-        Loading...
-      </div>
-    );
+    return <div>Loading...</div>;
   }
 
   return (
     <Router>
       <div className="App">
-        <Header user={user} />
-        <div className="main-content">
-          <Routes>
-            <Route path="/login" element={!user ? <Login /> : <Navigate to="/home" />} />
-            <Route path="/signup" element={!user ? <SignUp /> : <Navigate to="/home" />} />
-            <Route path="/home" element={user ? <Home /> : <Navigate to="/login" />} />
-            <Route path="/" element={<Navigate to="/login" />} />
-          </Routes>
-        </div>
+        <Header />
+        <Routes>
+          <Route path="/login" element={!user ? <Login /> : <Navigate to="/home" />} />
+          <Route path="/signup" element={!user ? <SignUp /> : <Navigate to="/home" />} />
+          <Route path="/home" element={user ? <Home /> : <Navigate to="/login" />} />
+          <Route path="/status" element={<FirebaseStatus />} />
+          <Route path="/" element={<Navigate to="/login" />} />
+        </Routes>
       </div>
     </Router>
   );
