@@ -36,7 +36,7 @@ const FirebaseStatus = () => {
         }
 
         try {
-          await getDocs(collection(db, 'test'));
+          const testQuery = await getDocs(collection(db, 'test'));
           setStatus(prev => ({ ...prev, firestore: 'connected' }));
         } catch (firestoreError) {
           setStatus(prev => ({ ...prev, firestore: 'error' }));
@@ -132,9 +132,9 @@ const FirebaseStatus = () => {
           <List.Item>Create a new project or select existing one</List.Item>
           <List.Item>Enable Authentication (Email/Password provider)</List.Item>
           <List.Item>Enable Firestore Database</List.Item>
-          <List.Item>Go to Project Settings &gt; General</List.Item>
+          <List.Item>Go to Project Settings > General</List.Item>
           <List.Item>Copy the config object to src/firebase/config.js</List.Item>
-        </List
+        </List>
       </div>
     </Container>
   );
