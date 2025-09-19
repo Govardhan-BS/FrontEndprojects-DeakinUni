@@ -36,7 +36,7 @@ const FirebaseStatus = () => {
         }
 
         try {
-          const testQuery = await getDocs(collection(db, 'test'));
+          await getDocs(collection(db, 'test'));
           setStatus(prev => ({ ...prev, firestore: 'connected' }));
         } catch (firestoreError) {
           setStatus(prev => ({ ...prev, firestore: 'error' }));
