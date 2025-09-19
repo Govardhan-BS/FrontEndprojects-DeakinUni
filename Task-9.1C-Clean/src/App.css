@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+.header-menu {
+  background-color: #1e3a8a !important;
+}
+
+.logo {
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+}
+
+.search-input {
+  width: 200px !important;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.login-container, .signup-container {
+  padding-top: 50px;
+}
+
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-header {
+  margin-bottom: 30px !important;
+  color: #1e3a8a;
+}
+
+.login-form, .signup-form {
+  text-align: left;
+}
+
+.login-button, .create-button {
+  margin-top: 20px !important;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-container {
+  padding-top: 50px;
+}
+
+.welcome-header {
+  color: #1e3a8a !important;
+  margin-bottom: 30px !important;
+}
+
+.welcome-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.logout-button {
+  margin-top: 20px !important;
+}
